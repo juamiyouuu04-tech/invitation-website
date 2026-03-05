@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Funny Invitation</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      position: relative;
+      background-color: #fce4ec;
+    }
+
+    h1 {
+      margin-top: 100px;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      position: absolute;
+    }
+
+    #yesBtn {
+      left: 45%;
+      top: 50%;
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #noBtn {
+      left: 55%;
+      top: 50%;
+      background-color: #f44336;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>May we have a coffee date later? 🎉</h1>
+
+  <button id="yesBtn" class="btn" onclick="alert('Yay! See you there ❤️')">
+    Yes
+  </button>
+
+  <button id="noBtn" class="btn">
+    No
+  </button>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", function() {
+      const maxX = window.innerWidth - noBtn.offsetWidth;
+      const maxY = window.innerHeight - noBtn.offsetHeight;
+
+      const randomX = Math.floor(Math.random() * maxX);
+      const randomY = Math.floor(Math.random() * maxY);
+
+      noBtn.style.left = randomX + "px";
+      noBtn.style.top = randomY + "px";
+    });
+  </script>
+
+</body>
+</html>
