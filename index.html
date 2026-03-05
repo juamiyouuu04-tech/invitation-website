@@ -50,8 +50,15 @@ yesBtn.addEventListener("mouseover", function(){
 
 });
 
+yesBtn.addEventListener("click", function(){
+  if(!running){
+    alert("Yay! See you later mommy I love you 😘💕");
+  }
+});
+
 noBtn.addEventListener("click", function(){
   running = false;
+  alert("Yes button has stop moving");
 });
 
 </script>
